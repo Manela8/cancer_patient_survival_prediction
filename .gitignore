@@ -1,0 +1,66 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# ===== Virtual environments =====
+venv/
+env/
+.venv/
+ENV/
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
+
+# ===== Streamlit =====
+# Never commit local secrets (API keys, DB creds, etc.)
+.streamlit/secrets.toml
+
+# ===== OS junk =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== Editor/IDE =====
+.vscode/
+.idea/
+*.swp
+
+# ===== Logs / temp / caches =====
+*.log
+*.tmp
+*.bak
+.pytest_cache/
+.mypy_cache/
+.cache/
+
+# ===== Env / secrets =====
+.env
+.env.*
+secrets.*
+
+# ===== Generated model artifacts =====
+# Regenerable by running src/training.py -- comment out any of these
+# if you'd rather keep them in the repo (e.g. for a portfolio so
+# reviewers don't have to retrain to see results).
+models/*.joblib
+models/calibration_curve.png
+models/calibration_report.json
+models/training_results.csv
+models/feature_columns.json
+
+# ===== Generated data =====
+# cleaned_data.csv is regenerable by running notebooks/Data_Cleaning.ipynb
+# against the raw file. Comment this out if you want the cleaned file
+# visible in the repo instead of requiring a re-run.
+data/cleaned_data.csv
+
+# NOTE: Breast_Cancer_METABRIC.csv (the raw file) is intentionally NOT
+# ignored here -- decide separately whether you're allowed to redistribute
+# it publicly (METABRIC data usually comes with a cBioPortal / data-access
+# agreement). If you're not sure, uncomment the line below:
+# data/Breast_Cancer_METABRIC.csv
